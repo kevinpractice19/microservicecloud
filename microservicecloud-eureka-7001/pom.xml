@@ -9,20 +9,14 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>microservicecloud-consumer-dept-80</artifactId>
+    <artifactId>microservicecloud-eureka-7001</artifactId>
 
     <dependencies>
+        <!--eureka-server服务端 -->
         <dependency>
-            <groupId>com.chenfu.springcloud</groupId>
-            <artifactId>microservicecloud-api</artifactId>
-            <version>${project.version}</version>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka-server</artifactId>
         </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
         <!-- 修改后立即生效，热部署 -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -33,5 +27,4 @@
             <artifactId>spring-boot-devtools</artifactId>
         </dependency>
     </dependencies>
-
 </project>
