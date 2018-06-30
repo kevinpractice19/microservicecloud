@@ -2,6 +2,7 @@
 package com.chenfu.springcloud.controller;
 
 import com.chenfu.springcloud.entities.Dept;
+import com.chenfu.springcloud.service.DeptClientServiceFallbackFactory;
 import com.chenfu.springcloud.service.DeptService;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,8 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @RestController
-public class DeptController
-{
+public class DeptController extends DeptClientServiceFallbackFactory {
 	@Autowired
 	private DeptService service;
 
